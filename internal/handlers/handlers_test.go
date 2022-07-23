@@ -27,8 +27,8 @@ var theTests = []struct {
 }{
 	{"home", "/", "GET", http.StatusOK},
 	{"about", "/about", "GET", http.StatusOK},
-	{"gq", "/generals-quarters", "GET", http.StatusOK},
-	{"ms", "/majors-suite", "GET", http.StatusOK},
+	{"gq", "/oceans", "GET", http.StatusOK},
+	{"ms", "/dudes", "GET", http.StatusOK},
 	{"sa", "/search-availability", "GET", http.StatusOK},
 	{"contact", "/contact", "GET", http.StatusOK},
 }
@@ -56,7 +56,7 @@ func TestRepository_Reservation(t *testing.T) {
 		RoomID: 1,
 		Room: models.Room{
 			ID:       1,
-			RoomName: "General's Quarters",
+			RoomName: "Ocean's wave",
 		},
 	}
 

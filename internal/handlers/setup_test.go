@@ -44,6 +44,12 @@ func TestMain(m *testing.M) {
 
 	app.Session = session
 
+	mailChan := make(chan models.MailData)
+	app.MainChan = mailChan
+	defer close(mailChan)
+
+	listenForMail()
+
 	tc, err := CreateTestTemplateCache()
 	if err != nil {
 		log.Fatal("cannot create template cache")
@@ -59,6 +65,14 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
+func listenForMail() {
+	go func() {
+		for {
+			_ = <-app.MainChan
+		}
+	}()
+}
+
 func getRoutes() http.Handler {
 	mux := chi.NewRouter()
 
@@ -68,8 +82,8 @@ func getRoutes() http.Handler {
 
 	mux.Get("/", Repo.Home)
 	mux.Get("/about", Repo.About)
-	mux.Get("/generals-quarters", Repo.Generals)
-	mux.Get("/majors-suite", Repo.Majors)
+	mux.Get("/oceans", Repo.Oceans)
+	mux.Get("/dudes", Repo.Dudes)
 
 	mux.Get("/search-availability", Repo.Availability)
 	mux.Post("/search-availability", Repo.PostAvailability)
