@@ -6,6 +6,7 @@ import (
 	"github.com/ivanpopov/bookings/internal/config"
 	"github.com/ivanpopov/bookings/internal/driver"
 	"github.com/ivanpopov/bookings/internal/forms"
+	"github.com/ivanpopov/bookings/internal/helpers"
 	"github.com/ivanpopov/bookings/internal/models"
 	"github.com/ivanpopov/bookings/internal/render"
 	"github.com/ivanpopov/bookings/internal/repository"
@@ -506,12 +507,23 @@ func (m *Repository) AdminDashboard(w http.ResponseWriter, r *http.Request) {
 	render.Template(w, r, "admin-dashboard.page.gohtml", &models.TemplateData{})
 }
 
-func (m *Repository) AdminNewReservations(w http.ResponseWriter, r *http.Request) {
-	render.Template(w, r, "admin-new-reservations.page.gohtml", &models.TemplateData{})
+func (m *Repository) AdminAllReservations(w http.ResponseWriter, r *http.Request) {
+	reservations, err := m.DB.AllReservations()
+	if err != nil {
+		helpers.ServerError(w, err)
+		return
+	}
+
+	data := make(map[string]interface{})
+	data["reservations"] = reservations
+
+	render.Template(w, r, "admin-all-reservations.page.gohtml", &models.TemplateData{
+		Data: data,
+	})
 }
 
-func (m *Repository) AdminAllReservations(w http.ResponseWriter, r *http.Request) {
-	render.Template(w, r, "admin-all-reservations.page.gohtml", &models.TemplateData{})
+func (m *Repository) AdminNewReservations(w http.ResponseWriter, r *http.Request) {
+	render.Template(w, r, "admin-new-reservations.page.gohtml", &models.TemplateData{})
 }
 
 func (m *Repository) AdminReservationsCalendar(w http.ResponseWriter, r *http.Request) {
