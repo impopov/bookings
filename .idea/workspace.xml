@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc32350b-c06d-4ed2-b4f5-d1c125296bf6" name="Changes" comment="adding images">
+      <change afterPath="$PROJECT_DIR$/templates/admin-reservations-show.page.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/975d6af0-60f1-423b-a02c-c78b899235d1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/975d6af0-60f1-423b-a02c-c78b899235d1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookings" beforeDir="false" afterPath="$PROJECT_DIR$/bookings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/web/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/routes.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/render/render.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/render/render.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/models/models.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/repository/dbrepo/postgres.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/dbrepo/postgres.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/repository/dbrepo/test-repo.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/dbrepo/test-repo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/repository/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin-all-reservations.page.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin-all-reservations.page.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin-new-reservations.page.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin-new-reservations.page.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin.layout.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin.layout.gohtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +77,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/migrations" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/static/admin" />
       <recent name="$PROJECT_DIR$/email-templates" />
       <recent name="$PROJECT_DIR$/static/images" />
-      <recent name="$PROJECT_DIR$/internal/forms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -808,7 +808,7 @@ false Zulu
 13655||10|C|G
 13655||-9223372036854775808|U|G
 13655||10|U|G</Grants>
-      <IntrospectionStateNumber>893</IntrospectionStateNumber>
+      <IntrospectionStateNumber>933</IntrospectionStateNumber>
       <ObjectId>16560</ObjectId>
       <Relations>sequence|table|16565|16566|1
 sequence|table|16577|16578|1
@@ -4255,7 +4255,7 @@ sequence|table|16606|16607|1
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>893</IntrospectionStateNumber>
+      <IntrospectionStateNumber>933</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4292,7 +4292,7 @@ sequence|table|16606|16607|1
     </sequence>
     <table id="271" parent="265" name="reservations">
       <ObjectId>16578</ObjectId>
-      <StateNumber>826</StateNumber>
+      <StateNumber>932</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>ivanpopov</OwnerName>
     </table>
@@ -4408,7 +4408,15 @@ sequence|table|16606|16607|1
       <StateNumber>822</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="288" parent="271" name="reservations_rooms_id_fk">
+    <column id="288" parent="271" name="processed">
+      <DataType>integer|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StateNumber>932</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="289" parent="271" name="reservations_rooms_id_fk">
       <ColNames>room_id</ColNames>
       <ObjectId>16613</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4420,7 +4428,7 @@ sequence|table|16606|16607|1
       <RefTableName>rooms</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="289" parent="271" name="reservations_pkey">
+    <index id="290" parent="271" name="reservations_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16588</ObjectId>
@@ -4429,7 +4437,7 @@ sequence|table|16606|16607|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="290" parent="271" name="reservations_last_name_idx">
+    <index id="291" parent="271" name="reservations_last_name_idx">
       <ColNames>last_name</ColNames>
       <ObjectId>16638</ObjectId>
       <StateNumber>830</StateNumber>
@@ -4438,7 +4446,7 @@ sequence|table|16606|16607|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="291" parent="271" name="reservations_email_idx">
+    <index id="292" parent="271" name="reservations_email_idx">
       <ColNames>email</ColNames>
       <ObjectId>16637</ObjectId>
       <StateNumber>830</StateNumber>
@@ -4447,14 +4455,14 @@ sequence|table|16606|16607|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="292" parent="271" name="reservations_pkey">
+    <key id="293" parent="271" name="reservations_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16589</ObjectId>
       <Primary>1</Primary>
       <StateNumber>822</StateNumber>
       <UnderlyingIndexId>16588</UnderlyingIndexId>
     </key>
-    <column id="293" parent="272" name="id">
+    <column id="294" parent="272" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;restrictions_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4462,7 +4470,7 @@ sequence|table|16606|16607|1
       <StateNumber>824</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="294" parent="272" name="restriction_name">
+    <column id="295" parent="272" name="restriction_name">
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4470,21 +4478,21 @@ sequence|table|16606|16607|1
       <StateNumber>824</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="295" parent="272" name="created_at">
+    <column id="296" parent="272" name="created_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>824</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="296" parent="272" name="updated_at">
+    <column id="297" parent="272" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>824</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="297" parent="272" name="restrictions_pkey">
+    <index id="298" parent="272" name="restrictions_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16604</ObjectId>
@@ -4493,14 +4501,14 @@ sequence|table|16606|16607|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="298" parent="272" name="restrictions_pkey">
+    <key id="299" parent="272" name="restrictions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16605</ObjectId>
       <Primary>1</Primary>
       <StateNumber>824</StateNumber>
       <UnderlyingIndexId>16604</UnderlyingIndexId>
     </key>
-    <column id="299" parent="273" name="id">
+    <column id="300" parent="273" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;room_restrictions_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4508,55 +4516,55 @@ sequence|table|16606|16607|1
       <StateNumber>825</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="300" parent="273" name="start_date">
+    <column id="301" parent="273" name="start_date">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>825</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="301" parent="273" name="end_date">
+    <column id="302" parent="273" name="end_date">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>825</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="302" parent="273" name="room_id">
+    <column id="303" parent="273" name="room_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>825</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="303" parent="273" name="reservation_id">
+    <column id="304" parent="273" name="reservation_id">
       <DataType>integer|0s</DataType>
       <Position>5</Position>
       <StateNumber>868</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="304" parent="273" name="restriction_id">
+    <column id="305" parent="273" name="restriction_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>825</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="305" parent="273" name="created_at">
+    <column id="306" parent="273" name="created_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>825</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="306" parent="273" name="updated_at">
+    <column id="307" parent="273" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>825</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <foreign-key id="307" parent="273" name="room_restrictions_rooms_id_fk">
+    <foreign-key id="308" parent="273" name="room_restrictions_rooms_id_fk">
       <ColNames>room_id</ColNames>
       <ObjectId>16618</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4568,7 +4576,7 @@ sequence|table|16606|16607|1
       <RefTableName>rooms</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="308" parent="273" name="room_restrictions_reservations_id_fk">
+    <foreign-key id="309" parent="273" name="room_restrictions_reservations_id_fk">
       <ColNames>reservation_id</ColNames>
       <ObjectId>24577</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4580,7 +4588,7 @@ sequence|table|16606|16607|1
       <RefTableName>reservations</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="309" parent="273" name="room_restrictions_restrictions_id_fk">
+    <foreign-key id="310" parent="273" name="room_restrictions_restrictions_id_fk">
       <ColNames>restriction_id</ColNames>
       <ObjectId>16623</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4592,7 +4600,7 @@ sequence|table|16606|16607|1
       <RefTableName>restrictions</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="310" parent="273" name="room_restrictions_pkey">
+    <index id="311" parent="273" name="room_restrictions_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16611</ObjectId>
@@ -4601,33 +4609,33 @@ sequence|table|16606|16607|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="311" parent="273" name="room_restrictions_start_date_end_date_idx">
+    <index id="312" parent="273" name="room_restrictions_start_date_end_date_idx">
       <ColNames>start_date
 end_date</ColNames>
       <ObjectId>16629</ObjectId>
       <StateNumber>829</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="312" parent="273" name="room_restrictions_room_id_idx">
+    <index id="313" parent="273" name="room_restrictions_room_id_idx">
       <ColNames>room_id</ColNames>
       <ObjectId>16630</ObjectId>
       <StateNumber>829</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="313" parent="273" name="room_restrictions_reservation_id_idx">
+    <index id="314" parent="273" name="room_restrictions_reservation_id_idx">
       <ColNames>reservation_id</ColNames>
       <ObjectId>24576</ObjectId>
       <StateNumber>868</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="314" parent="273" name="room_restrictions_pkey">
+    <key id="315" parent="273" name="room_restrictions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16612</ObjectId>
       <Primary>1</Primary>
       <StateNumber>825</StateNumber>
       <UnderlyingIndexId>16611</UnderlyingIndexId>
     </key>
-    <column id="315" parent="274" name="id">
+    <column id="316" parent="274" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;rooms_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4635,7 +4643,7 @@ end_date</ColNames>
       <StateNumber>823</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="316" parent="274" name="room_name">
+    <column id="317" parent="274" name="room_name">
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4643,21 +4651,21 @@ end_date</ColNames>
       <StateNumber>823</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="317" parent="274" name="created_at">
+    <column id="318" parent="274" name="created_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>823</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="318" parent="274" name="updated_at">
+    <column id="319" parent="274" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>823</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="319" parent="274" name="rooms_pkey">
+    <index id="320" parent="274" name="rooms_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16596</ObjectId>
@@ -4666,21 +4674,21 @@ end_date</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="320" parent="274" name="rooms_pkey">
+    <key id="321" parent="274" name="rooms_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16597</ObjectId>
       <Primary>1</Primary>
       <StateNumber>823</StateNumber>
       <UnderlyingIndexId>16596</UnderlyingIndexId>
     </key>
-    <column id="321" parent="275" name="version">
+    <column id="322" parent="275" name="version">
       <DataType>varchar(14)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>820</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="322" parent="275" name="schema_migration_version_idx">
+    <index id="323" parent="275" name="schema_migration_version_idx">
       <ColNames>version</ColNames>
       <ObjectId>16564</ObjectId>
       <StateNumber>820</StateNumber>
@@ -4690,7 +4698,7 @@ end_date</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <column id="323" parent="276" name="id">
+    <column id="324" parent="276" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4698,7 +4706,7 @@ end_date</ColNames>
       <StateNumber>821</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="324" parent="276" name="first_name">
+    <column id="325" parent="276" name="first_name">
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4706,7 +4714,7 @@ end_date</ColNames>
       <StateNumber>821</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="325" parent="276" name="last_name">
+    <column id="326" parent="276" name="last_name">
       <DataType>varchar(255)|0s</DataType>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4714,21 +4722,21 @@ end_date</ColNames>
       <StateNumber>821</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="326" parent="276" name="email">
+    <column id="327" parent="276" name="email">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>821</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="327" parent="276" name="password">
+    <column id="328" parent="276" name="password">
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>821</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="328" parent="276" name="access_level">
+    <column id="329" parent="276" name="access_level">
       <DataType>integer|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4736,21 +4744,21 @@ end_date</ColNames>
       <StateNumber>821</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="329" parent="276" name="created_at">
+    <column id="330" parent="276" name="created_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>821</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="330" parent="276" name="updated_at">
+    <column id="331" parent="276" name="updated_at">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>821</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="331" parent="276" name="users_pkey">
+    <index id="332" parent="276" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16575</ObjectId>
@@ -4759,7 +4767,7 @@ end_date</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="332" parent="276" name="users_email_idx">
+    <index id="333" parent="276" name="users_email_idx">
       <ColNames>email</ColNames>
       <ObjectId>16628</ObjectId>
       <StateNumber>828</StateNumber>
@@ -4769,7 +4777,7 @@ end_date</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="333" parent="276" name="users_pkey">
+    <key id="334" parent="276" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16576</ObjectId>
       <Primary>1</Primary>
