@@ -1,4 +1,4 @@
 #!/bin/bash
 
 go build -o bookings cmd/web/*.go
-./bookings
+./bookings -dbname=bookings -dbuser=ivanpopov -cache=false -production=false
