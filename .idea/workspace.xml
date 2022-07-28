@@ -5,30 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc32350b-c06d-4ed2-b4f5-d1c125296bf6" name="Changes" comment="adding images">
-      <change afterPath="$PROJECT_DIR$/migrations/20220728102147_add_user_to_user_table.postgres.down.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/20220728102147_add_user_to_user_table.postgres.up.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/975d6af0-60f1-423b-a02c-c78b899235d1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/975d6af0-60f1-423b-a02c-c78b899235d1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/975d6af0-60f1-423b-a02c-c78b899235d1/storage_v2/_src_/database/bookings.OgOGdw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/975d6af0-60f1-423b-a02c-c78b899235d1/storage_v2/_src_/database/bookings.OgOGdw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookings" beforeDir="false" afterPath="$PROJECT_DIR$/bookings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/web/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/web/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handlers/handlers_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/handlers_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handlers/setup_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handlers/setup_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/render/render.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/render/render.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/repository/dbrepo/postgres.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/dbrepo/postgres.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/repository/dbrepo/test-repo.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/dbrepo/test-repo.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/repository/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin-all-reservations.page.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin-all-reservations.page.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin-new-reservations.page.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin-new-reservations.page.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin-reservations-calendar.page.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin-reservations-calendar.page.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin-reservations-show.page.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin-reservations-show.page.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin.layout.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin.layout.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.layout.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.layout.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.page.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.page.gohtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
